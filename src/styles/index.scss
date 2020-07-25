@@ -19,9 +19,6 @@ h1 {
 
 .app {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
 }
 
 .header {
@@ -51,11 +48,11 @@ h1 {
   justify-content: space-between;
 }
 
-.container {
+.parallax-container {
   max-width: 940px;
   margin: 0 auto;
   display: flex;
-  height: 63%;
+  position: absolute;
   align-items: center;
 
   .col {
