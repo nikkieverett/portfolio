@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import anime from 'animejs/lib/anime.es.js'
+import anime from 'animejs/lib/anime.es'
 
 import '../styles/waves.scss'
 
@@ -14,27 +14,27 @@ export default function Waves() {
       targets: waves[0],
       backgroundPositionX: anime.random(800, 900) + window.pageYOffset,
       direction: 'alternate',
-      duration: 3000,
+      duration: 3000
     })
     anime({
       targets: waves[1],
       backgroundPositionX: anime.random(400, 500) + window.pageYOffset,
       duration: 5000,
       direction: 'alternate',
-      delay: 2,
+      delay: 2
     })
     anime({
       targets: waves[2],
       backgroundPositionX: anime.random(700, 800) + window.pageYOffset,
       direction: 'alternate',
-      duration: 3000,
+      duration: 3000
     })
     anime({
       targets: waves[3],
       backgroundPositionX: anime.random(500, 600) + window.pageYOffset,
       duration: 4000,
       direction: 'alternate',
-      delay: 1,
+      delay: 1
     })
   }
 
