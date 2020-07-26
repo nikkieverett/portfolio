@@ -9,24 +9,41 @@ export default function Waves() {
   const wave3 = useRef(null)
   const wave4 = useRef(null)
 
+  const onScroll = (e, waves) => {
+    anime({
+      targets: waves[0],
+      backgroundPositionX: anime.random(800, 900) + window.pageYOffset,
+      direction: 'alternate',
+      duration: 3000,
+    })
+    anime({
+      targets: waves[1],
+      backgroundPositionX: anime.random(400, 500) + window.pageYOffset,
+      duration: 5000,
+      direction: 'alternate',
+      delay: 2,
+    })
+    anime({
+      targets: waves[2],
+      backgroundPositionX: anime.random(700, 800) + window.pageYOffset,
+      direction: 'alternate',
+      duration: 3000,
+    })
+    anime({
+      targets: waves[3],
+      backgroundPositionX: anime.random(500, 600) + window.pageYOffset,
+      duration: 4000,
+      direction: 'alternate',
+      delay: 1,
+    })
+  }
+
   useEffect(() => {
-    const onScroll = () => {
-      anime({
-        targets: [wave1.current, wave2.current, wave3.current, wave4.current],
-        backgroundPositionX: anime.stagger([1000, 1400]),
-        loop: true,
-        keyframes: [{ backgroundPositionX: 0 }, { backgroundPositionX: 1400 }],
-        duration: (target, index) => {
-          if (index === 0 || index === 2) {
-            return 30000
-          }
+    const waves = [wave1.current, wave2.current, wave3.current, wave4.current]
 
-          return 15000
-        },
-      })
-    }
-
-    window.addEventListener('scroll', onScroll)
+    document.body.addEventListener('wheel', (e) => {
+      onScroll(e, waves)
+    })
 
     return () => {
       window.removeEventListener('scroll', onScroll)

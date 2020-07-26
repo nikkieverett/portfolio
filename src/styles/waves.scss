@@ -9,41 +9,34 @@
     height: 378px;
     background-image: url('../images/waves.png');
     background-size: 1400px 378px;
+    background-repeat: repeat-x;
 
     &--1 {
-      // animation: wave1 30s ease-out 1;
       z-index: 10;
       opacity: 1;
-      animation-delay: -2s;
       bottom: -140px;
-      background-position: 100px 378px;
+      background-position: 0;
     }
 
     &--2 {
-      // animation: wave2 10s ease-out 1;
       z-index: 9;
-      opacity: .1;
-      animation-delay: 2s;
+      opacity: .5;
       bottom: -110px;
-      background-position: 500px 378px;
+      background-position: 500px;
     }
 
     &--3 {
-      // animation: wave1 20s ease-out 1;
       z-index: 8;
       opacity: .2;
-      animation-delay: -1s;
       bottom: -120px;
-      background-position: 900px 378px;
+      background-position: 900px;
     }
 
     &--4 {
-      // animation: wave2 30s ease-out 1;
       z-index: 7;
       opacity: .7;
-      animation-delay: -6s;
       bottom: -100px;
-      background-position: 1200px 378px;
+      background-position: 1200px;
     }
   }
 }
