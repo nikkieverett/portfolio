@@ -1,57 +1,13 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 
 import Waves from './Waves'
 
 function App() {
-  const $app = useRef(null)
-
-  // useEffect(() => {
-  //   // Set up vars
-  //   const sections = document.querySelectorAll('.section')
-  //   const sectionsY = []
-
-  //   // Cache position of each panel
-  //   sections.forEach((el) => {
-  //     sectionsY.push(el.offsetTop)
-  //   })
-
-  //   // Update the window
-  //   function updateWindow() {
-  //     console.log(window)
-  //     var y = $app.scrollTop
-  //     var i;
-  //     var l;
-  //     console.log(y)
-
-  //     // Loop through our section positions
-  //     for (i = 0, l = sections.length; i < l; i++) {
-  //       /*
-  //           Firstly, we break if we're checking our last section,
-  //           otherwise we compare if he y position is in between
-  //           two panels
-  //       */
-
-  //       if (i === l - 1 || (y >= sectionsY[i] && y <= sectionsY[i + 1])) {
-  //         break
-  //       }
-  //     }
-
-  //     // Update classes
-  //     // sections.forEach((section) => {
-  //     //   section.classList.remove('section-fixed')
-  //     // })
-  //     // sections[i].classList.add('section-fixed')
-  //   }
-
-  //   // Bind our function to window scroll
-  //   $app.current.addEventListener('scroll', () => {
-  //     updateWindow()
-  //   })
-  // }, [])
+  const [waves, setWaves] = useState([])
 
   return (
-    <div className="app" ref={$app}>
-      <div className="header" />
+    <div className="app">
+      <div className="header" waves={waves} />
       <div className="section section-placeholder" />
       <div className="section section-fixed">
         <div className="section-inner">
@@ -88,7 +44,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Waves />
+      <Waves setWaves={setWaves} waves={waves} />
       <div className="section">
         <h1>Section 2</h1>
       </div>

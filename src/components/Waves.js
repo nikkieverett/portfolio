@@ -3,55 +3,75 @@ import anime from 'animejs/lib/anime.es'
 
 import '../styles/waves.scss'
 
-export default function Waves() {
+const Waves = ({ setWaves, waves }) => {
   const wave1 = useRef(null)
   const wave2 = useRef(null)
   const wave3 = useRef(null)
   const wave4 = useRef(null)
+  const waveContainer = useRef(null)
 
-  const onScroll = (e, waves) => {
-    anime({
-      targets: waves,
-      direction: 'alternate',
-      backgroundPositionX: (el, i) => {
-        const positions = [
-          { start: 800, end: 900 },
-          { start: 400, end: 500 },
-          { start: 700, end: 800 },
-          { start: 500, end: 600 }
-        ]
+  const waveData = {
+    targets: waves,
+    backgroundPositionX: (el, i) => {
+      const positions = [
+        { start: 800, end: 900 },
+        { start: 400, end: 500 },
+        { start: 700, end: 800 },
+        { start: 500, end: 600 }
+      ]
 
-        const randInt = anime.random(positions[i].start, positions[i].end) + window.pageYOffset
+      const randInt = anime.random(positions[i].start, positions[i].end) + window.pageYOffset
 
-        return randInt + window.pageYOffset
-      },
-      duration: (el, i) => {
-        const durations = [3000, 5000, 3000, 4000]
+      return randInt + window.pageYOffset
+    },
+    duration: (el, i) => {
+      const durations = [3000, 5000, 3000, 4000]
 
-        return durations[i]
-      },
-      delay: (el, i) => {
-        const delays = [0, 2, 0, 1]
+      return durations[i]
+    },
+    delay: (el, i) => {
+      const delays = [0, 2, 0, 1]
 
-        return delays[i]
-      }
-    })
+      return delays[i]
+    }
+  }
+  const stretchData = {
+    targets: waves,
+    scaleX: [
+      { value: 1.3, duration: 500, delay: 0, easing: 'easeInOutCirc' },
+      { value: 1, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
+      { value: 1.2, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
+      { value: 1, duration: 2500, delay: 0, easing: 'easeInBack' }
+    ],
+    skewY: [
+      { value: 5, duration: 500, delay: 0, easing: 'easeInOutCirc' },
+      { value: -5, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
+      { value: 3, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
+      { value: -2, duration: 2000, delay: -2, easing: 'easeOutBack' },
+      { value: 0, duration: 2500, delay: 0, easing: 'easeOutBack' }
+    ]
   }
 
   useEffect(() => {
     const waves = [wave1.current, wave2.current, wave3.current, wave4.current]
 
-    document.body.addEventListener('wheel', (e) => {
-      onScroll(e, waves)
-    })
+    setWaves(waves)
+  }, [setWaves])
 
-    return () => {
-      window.removeEventListener('scroll', onScroll)
+  useEffect(() => {
+    if (waves.length > 0) {
+      waveContainer.current.addEventListener('mouseover', () => {
+        anime(waveData)
+      })
+      window.addEventListener('scroll', () => {
+        anime(stretchData)
+        anime(waveData)
+      })
     }
-  }, [])
+  }, [waves, stretchData, waveData])
 
   return (
-    <div className="waves">
+    <div className="waves" ref={waveContainer}>
       <div className="wave wave--1" ref={wave1} />
       <div className="wave wave--2" ref={wave2} />
       <div className="wave wave--3" ref={wave3} />
@@ -59,3 +79,5 @@ export default function Waves() {
     </div>
   )
 }
+
+export default Waves
