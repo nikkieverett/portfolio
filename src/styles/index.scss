@@ -1,11 +1,14 @@
-@import './reset';
-@import './animation';
-
 $primary-font: 'Roboto Mono', monospace;
 $secondary-font: 'IBM Plex Mono', monospace;
 $primary-font-color: #4C4646;
 $primary-color: #F58B61;
 $white-color: #fff;
+
+@import './reset';
+@import './animation';
+@import './hero';
+@import './waves';
+@import './header';
 
 .app {
   height: 100%;
@@ -14,7 +17,7 @@ $white-color: #fff;
   position: relative;
 }
 
-.section {
+.section-static {
   background-color: $primary-color;
   min-height: 100vh;
   position: relative;
@@ -22,18 +25,34 @@ $white-color: #fff;
 }
 
 .section-fixed {
-  background-color: $white-color;
+  background-color: transparent;
   position: fixed;
   z-index: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  .section-inner {
-  }
 }
 
 .section-placeholder {
   background-color: transparent;
+  min-height: 100vh;
+}
+
+.btn {
+  font-family: $primary-font;
+
+  &--primary {
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    color: $white-color;
+  }
+
+  &--secondary {
+    border: 2px solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+  }
+
+  &--no-outline {
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: $primary-color;
+  }
 }

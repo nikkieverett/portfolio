@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import anime from 'animejs/lib/anime.es'
 
-import '../styles/waves.scss'
-
 const Waves = ({ setWaves, waves }) => {
   const wave1 = useRef(null)
   const wave2 = useRef(null)
@@ -39,16 +37,16 @@ const Waves = ({ setWaves, waves }) => {
     targets: waves,
     scaleX: [
       { value: 1.3, duration: 500, delay: 0, easing: 'easeInOutCirc' },
-      { value: 1, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
-      { value: 1.2, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
-      { value: 1, duration: 2500, delay: 0, easing: 'easeInBack' }
+      { value: 1, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
+      { value: 1.1, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
+      { value: 1, duration: 800, delay: -2, easing: 'easeInOutCirc' }
     ],
     skewY: [
       { value: 5, duration: 500, delay: 0, easing: 'easeInOutCirc' },
-      { value: -5, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
+      { value: -4.5, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
       { value: 3, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
-      { value: -2, duration: 2000, delay: -2, easing: 'easeOutBack' },
-      { value: 0, duration: 2500, delay: 0, easing: 'easeOutBack' }
+      { value: -1, duration: 1000, delay: -2, easing: 'easeOutBack' },
+      { value: 0, duration: 500, delay: -1, easing: 'easeOutBack' }
     ]
   }
 

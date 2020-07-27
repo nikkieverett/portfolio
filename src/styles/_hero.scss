@@ -1,0 +1,59 @@
+.hero {
+	background: transparent;
+	top: 35%;
+	right: 50%;
+	transform: translate(50%, -40%);
+	width: 100%;
+
+	&__content {
+		font-family: $primary-font;
+		display: table-cell;
+		vertical-align: middle;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		color: $primary-font-color;
+	}
+
+  &__title {
+		font-weight: 700;
+		font-size: 53px;
+		margin-bottom: 15px;
+		position: relative;
+	}
+
+	&__subtitle {
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+
+	&__image {
+		background-image: url('../images/profile-picure.jpg');
+		width: 400px;
+		height: 400px;
+		border-radius: 100%;
+		margin: 0 auto;
+
+		&::before {
+			content: '';
+			height: 400px;
+			width: 400px;
+			border-radius: 100%;
+			position: absolute;
+			background-color: rgba($primary-color, .2);
+		}
+	}
+
+	&__icon {
+		background-image: url('../images/hand-wave.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		height: 60px;
+		width: 60px;
+		top: -5px;
+		right: 85px;
+	}
+}
