@@ -1,30 +1,30 @@
 .header {
-	height: auto;
-	padding: 15px 0;
-	display: flex;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 11;
+  display: flex;
+  height: auto;
+  left: 0;
+  padding: 15px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 11;
 
-	&__logo {
-		background-image: url('../images/icon.svg');
-		width: 50px;
-		height: 80px;
-		background-size: contain;
-		background-repeat: no-repeat;
-		display: inline-block;
-	}
+  &__logo {
+    background-image: url('../images/icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 80px;
+    width: 50px;
+  }
 
-	&__links {
-		float: right;
-		display: flex;
+  &__links {
+    display: flex;
+    float: right;
 
-		&-link {
-			& + .header__links-link {
-				margin-left: 15px;
-			}
-		}
-	}
+    &-link {
+      & + .header__links-link {
+        margin-left: 15px;
+      }
+    }
+  }
 }

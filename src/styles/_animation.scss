@@ -3,7 +3,8 @@
   0% {
     background-position-x: 100;
   }
-   100% {
+
+  100% {
     background-position-x: 1400px;
   }
 }
@@ -12,7 +13,8 @@
   0% {
     background-position-x: 400;
   }
-   100% {
+
+  100% {
     background-position-x: -1400px;
   }
 }
@@ -21,18 +23,21 @@
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(21deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
 
 @keyframes float-up {
-	0% {
+  0% {
     transform: translate(0deg);
   }
+
   100% {
     transform: translate(0deg);
   }
