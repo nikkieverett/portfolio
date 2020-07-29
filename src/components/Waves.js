@@ -39,14 +39,13 @@ const Waves = ({ setWaves, waves }) => {
       { value: 1.3, duration: 500, delay: 0, easing: 'easeInOutCirc' },
       { value: 1, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
       { value: 1.1, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
-      { value: 1, duration: 800, delay: -2, easing: 'easeInOutCirc' }
+      { value: 1, duration: 800, delay: -2, easing: 'easeOutCirc' }
     ],
     skewY: [
       { value: 5, duration: 500, delay: 0, easing: 'easeInOutCirc' },
       { value: -4.5, duration: 1000, delay: -2, easing: 'easeInOutCirc' },
       { value: 3, duration: 1000, delay: 0, easing: 'easeInOutCirc' },
-      { value: -1, duration: 1000, delay: -2, easing: 'easeOutBack' },
-      { value: 0, duration: 500, delay: -1, easing: 'easeOutBack' }
+      { value: 0, duration: 1000, delay: -2, easing: 'easeOutBack' }
     ]
   }
 
