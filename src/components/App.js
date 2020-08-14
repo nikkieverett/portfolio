@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 import Waves from './Waves'
 import Header from './Header'
-import Hero from './Hero'
-import About from './About'
-import Projects from './Projects'
-import Skills from './Skills'
-import Contact from './Contact'
+import Hero from '../sections/Hero'
+import About from '../sections/About'
+import Projects from '../sections/Projects'
+import Skills from '../sections/Skills'
+import Contact from '../sections/Contact'
 
 function App() {
   const [waves, setWaves] = useState([])

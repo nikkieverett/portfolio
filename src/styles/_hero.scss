@@ -6,7 +6,7 @@
   width: 100%;
 
   &__content {
-    color: $primary-font-color;
+    color: $color-primary;
     display: table-cell;
     font-family: $primary-font;
     height: auto;
@@ -18,42 +18,95 @@
   }
 
   &__title {
-    font-size: 53px;
+    font-family: $secondary-font;
+    font-size: 55px;
     font-weight: 700;
+    line-height: 65px;
     margin-bottom: 15px;
     position: relative;
   }
 
   &__subtitle {
+    color: $color-secondary;
+    letter-spacing: .1px;
     font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
     margin-bottom: 24px;
   }
 
   &__image {
-    background-image: url('../images/profile-picure.jpg');
+    background: url('../images/profile-picure.jpg') no-repeat;
+    background-size: contain;
     border-radius: 100%;
-    height: 400px;
+    box-shadow: 3px 7px 14px 0 rgba(#000, .08);
+    height: 356px;
     margin: 0 auto;
-    width: 400px;
+    width: 356px;
 
     &::before {
-      background-color: rgba($primary-color, .2);
+      background-color: rgba($color-primary, .2);
       border-radius: 100%;
       content: '';
-      height: 400px;
+      height: 356px;
       position: absolute;
-      width: 400px;
+      width: 356px;
+    }
+
+    &::after {
+      background: url('../images/dots.jpg') no-repeat;
+      background-size: contain;
+      content: '';
+      height: 696px;
+      left: -20px;
+      position: absolute;
+      top: -90px;
+      width: 696px;
+      z-index: -1;
     }
   }
 
   &__icon {
-    background-image: url('../images/hand-wave.svg');
-    background-repeat: no-repeat;
+    background: url('../images/hand-wave.svg') no-repeat;
     background-size: contain;
     height: 60px;
     position: absolute;
     right: 85px;
     top: -5px;
     width: 60px;
+  }
+
+  &__links {
+    margin-top: 30px;
+
+    .link {
+      background-size: contain;
+      display: inline-block;
+      height: 35px;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 35px;
+
+      & + .link {
+        margin-left: 16px;
+      }
+
+      &--linkedin {
+        background: url('../images/linkedin-icon.svg') no-repeat;
+      }
+
+      &--github {
+        background: url('../images/github-icon.svg') no-repeat;
+      }
+
+      &--codepen {
+        background: url('../images/codepen-icon.svg') no-repeat;
+      }
+
+      &--instagram {
+        background: url('../images/insta-icon.svg') no-repeat;
+      }
+    }
   }
 }

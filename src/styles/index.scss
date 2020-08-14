@@ -1,27 +1,41 @@
-$primary-font: 'Roboto Mono', monospace;
-$secondary-font: 'IBM Plex Mono', monospace;
-$primary-font-color: #4C4646;
-$primary-color: #F58B61;
-$white-color: #fff;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Roboto Mono', monospace;
+$color-primary: #F58B61;
+$color-secondary: #4C4646;
+$color-green: #7F925C;
+$color-grey: #A5A5A5;
+$color-white: #fff;
+
+@mixin button-base {
+  font-family: $primary-font;
+  height: 47px;
+  text-transform: uppercase;
+  border: 0px;
+  outline: none;
+  border-radius: 4px;
+}
 
 @import './reset';
 @import './animation';
 @import './hero';
 @import './waves';
 @import './header';
+@import './projects';
 
 .app {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
+  font-family: $primary-font;
+  color: $color-secondary;
 }
 
 .section-static {
-  background-color: $primary-color;
+  background-color: $color-primary;
   min-height: 100vh;
   position: relative;
-  z-index: 5;
+  z-index: 11;
 }
 
 .section-fixed {
@@ -35,24 +49,27 @@ $white-color: #fff;
   min-height: 100vh;
 }
 
+
 .btn {
-  font-family: $primary-font;
+  @include button-base;
+  width: 219px;
 
   &--primary {
-    background-color: $primary-color;
-    border: 2px solid $primary-color;
-    color: $white-color;
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    color: $color-white;
   }
 
   &--secondary {
     background-color: transparent;
-    border: 2px solid $primary-color;
-    color: $primary-color;
+    border: 2px solid $color-primary;
+    color: $color-primary;
   }
 
   &--no-outline {
+    width: auto;
     background-color: transparent;
     border: 2px solid transparent;
-    color: $primary-color;
+    color: $color-primary;
   }
 }

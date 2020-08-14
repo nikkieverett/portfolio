@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  height: auto;
   left: 0;
   padding: 15px 0;
   position: fixed;
@@ -21,9 +20,9 @@
     display: flex;
     float: right;
 
-    &-link {
-      & + .header__links-link {
-        margin-left: 15px;
+    .link {
+      & + .link {
+        margin-left: 64px;
       }
     }
   }

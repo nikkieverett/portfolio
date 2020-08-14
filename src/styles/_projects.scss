@@ -1,0 +1,121 @@
+.projects {
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.project {
+	&__timeline {
+		color: $color-white;
+		margin-top: 40px;
+
+		&-date {
+			font-size: 18px;
+			background-color: $color-primary;
+			padding: 10px 0;
+			text-align: center;
+		}
+
+		&::before {
+			content: '';
+			border: 1px solid $color-white;
+			position: absolute;
+			top: 0px;
+			bottom: 0;
+			left: 50%;
+			z-index: -1;
+		}
+	}
+
+	&__card {
+		background-color: $color-white;
+		padding: 25px;
+		margin-bottom: 50px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -20px;
+			top: 30px;
+			width: 0;
+			height: 0;
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent;
+			border-right: 30px solid $color-white;
+		}
+
+		&-name {
+			font-family: $secondary-font;
+			font-size: 23px;
+			line-height: 30px;
+			margin-bottom: 5px;
+		}
+
+		&-subtitle {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 7px;
+		}
+
+		&-description {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 22px;
+			// display: none;
+		}
+
+		&-tech {
+			font-size: 14px;
+			font-weight: 500;
+			margin-top: 16px;
+			line-height: 20px;
+			// display: none;
+		}
+
+		&-btn {
+			@include button-base;
+			width: 116px;
+			height: 29px;
+			font-size: 12px;
+			position: relative;
+			padding-left: 16px;
+			margin: 15px 0 20px;
+			background-color: $color-white;
+
+			&--showmore {
+				background-color: $color-green;
+				color: $color-white;
+
+				&::before {
+					font-size: 16px;
+					content: '+';
+					position: absolute;
+					left: 10px;
+					top: 50%;
+					margin-top: -8px;
+				}
+			}
+		}
+
+		&-tags {
+			background-color: $color-white;
+			border-top: 1px solid $color-grey;
+			padding-top: 20px;
+
+			.tag {
+				text-transform: uppercase;
+				font-size: 13px;
+				border-radius: 100px;
+				padding: 7px 24px;
+				border: 1px solid $color-grey;
+				color: $color-grey;
+
+				+ .tag {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
