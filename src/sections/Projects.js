@@ -19,7 +19,25 @@ const Projects = () => {
     <div className="section-static">
       <div className="container">
         <div className="projects">
+          <div className="project row">
+            <div className="col-sm-2">
+              <div className="project__timeline">
+                <div className="project__timeline-date">
+                  PRESENT
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-10" />
+          </div>
           {projects}
+          <div className="project row">
+            <div className="col-sm-2">
+              <div className="project__timeline" />
+            </div>
+            <div className="col-sm-10">
+              <button className="projects__btn">View All</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

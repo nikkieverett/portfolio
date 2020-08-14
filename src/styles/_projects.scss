@@ -1,6 +1,19 @@
 .projects {
 	font-size: 20px;
-	padding-top: 20px;
+	padding: 20px 0 0;
+
+	&__btn {
+		@include button-base;
+		background: $color-primary;
+		border: 1.5px solid $color-white;
+		color: $color-white;
+		padding: 10px 25px;
+		height: unset;
+		position: absolute;
+		top: -20px;
+		left: -2px;
+		font-size: 18px;
+	}
 }
 
 .project {
@@ -17,7 +30,7 @@
 
 		&::before {
 			content: '';
-			border: 1px solid $color-white;
+			border-left: .25px solid $color-white;
 			position: absolute;
 			top: 0px;
 			bottom: 0;
@@ -31,6 +44,7 @@
 		padding: 25px;
 		margin-bottom: 50px;
 		position: relative;
+		border-radius: 4px;
 
 		&::before {
 			content: '';
@@ -62,7 +76,8 @@
 			font-weight: 300;
 			font-size: 14px;
 			line-height: 22px;
-			// display: none;
+			height: 0;
+			opacity: 0;
 		}
 
 		&-tech {
@@ -70,7 +85,6 @@
 			font-weight: 500;
 			margin-top: 16px;
 			line-height: 20px;
-			// display: none;
 		}
 
 		&-btn {
@@ -96,12 +110,33 @@
 					margin-top: -8px;
 				}
 			}
+
+			&--showless {
+				background-color: $color-white;
+				border: 1px solid $color-primary;
+				color: $color-primary;
+
+				&::before {
+					font-size: 16px;
+					content: '';
+					position: absolute;
+					left: 15px;
+					top: 50%;
+					margin-top: -1px;
+					width: 8px;
+					height: 2px;
+					background-color: $color-primary;
+				}
+			}
 		}
 
 		&-tags {
 			background-color: $color-white;
-			border-top: 1px solid $color-grey;
-			padding-top: 20px;
+			border-top: 1px solid $color-grey-light;
+			padding-top: 10px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: left;
 
 			.tag {
 				text-transform: uppercase;
@@ -110,10 +145,58 @@
 				padding: 7px 24px;
 				border: 1px solid $color-grey;
 				color: $color-grey;
+				display: block;
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+		}
 
-				+ .tag {
-					margin-left: 10px;
-				}
+		&-image {
+			height: 100%;
+			width: 300px;
+			box-shadow: 0 8px 16px 0 rgba(#000, .1);
+			border-radius: 12px;
+			border: 3px solid $color-white;
+			background-color: $color-green;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				width: 100%;
+			}
+		}
+	}
+
+	&:first-child {
+		.project__timeline {
+			margin: 0;
+
+			&::before {
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				border: 0;
+				background-color: $color-white;
+				top: 38px;
+				margin-left: -5px;
+			}
+		}
+	}
+
+	&:last-child {
+		.project__timeline {
+			padding: 10px 0;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 90px;
+				height: 1px;
+				background-color: $color-white;
+				bottom: 0;
+				left: 50%;
 			}
 		}
 	}

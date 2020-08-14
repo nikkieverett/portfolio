@@ -1,7 +1,8 @@
 const projects = [
   {
+    id: 'hrc',
     name: 'Homeowner Resource Center',
-    date: ' MAR 2020',
+    date: 'MAR 2020',
     subtitle: 'A tool to help homeowners guide homeowners through the process of completing their home improvement projects with accuracy and ease',
     description: 'The Modernize Homeowner Resource Center aggregates information related to a user’s home improvement project. This includes a list of matched contractors and their profiles, additional guides and resources, and tools to help calculate the cost of their project. The user can view information about each contractor they have been matched with and have the ability to set appointments and submit reviews as well as track the progress of their project.',
     tech: 'Built with React and bootstrapped with Create React App',
@@ -10,6 +11,7 @@ const projects = [
     link: null
   },
   {
+    id: 'hvaccost',
     name: 'HVAC Cost Calculator',
     date: 'JAN 2020',
     subtitle: 'A tool to help homeowners calculate the cost of their HVAC replacement projects.',
@@ -20,6 +22,7 @@ const projects = [
     link: 'https://modernize.com/hvac/cost-calculator'
   },
   {
+    id: 'windowscost',
     name: 'Windows Cost Calculator',
     date: 'SEPT 2019',
     subtitle: 'A tool to help homeowners calculate the cost of their window replacement project.',
@@ -30,6 +33,7 @@ const projects = [
     link: 'https://modernize.com/windows/replacement-cost-calculator'
   },
   {
+    id: 'modstyle',
     name: 'Mod Style Design System',
     date: 'MAY 2019',
     subtitle: 'Mod Style is a design system package used across all of Modernize Home Services’ domains and platforms.',
@@ -40,6 +44,7 @@ const projects = [
     link: 'https://modify.modernize.com/'
   },
   {
+    id: 'classmax',
     name: 'ClassMax',
     date: 'NOV 2017',
     subtitle: 'ClassMax is a digital cIass room management tool for 21st century teachers.',
@@ -50,6 +55,7 @@ const projects = [
     link: 'https://classmaxapp.com/what-is-classmax/'
   },
   {
+    id: 'cooking-spoon',
     name: 'The Cooking Spoon',
     date: 'JUNE 2017',
     subtitle: 'A recipe storage app for storing family recipes.',
