@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es'
 
-const ProjectCard = project => {
+const ProjectCard = (project) => {
   const { date, name, subtitle, description, tech, tags, id, link } = project.project
   const [descriptionVisible, setDescriptionVisible] = useState(false)
   const $descriptionContainer = useRef(null)
@@ -50,7 +50,7 @@ const ProjectCard = project => {
     setDescriptionVisible(!descriptionVisible)
   }
 
-	return (
+  return (
     <div className="project row">
       <div className="col-sm-2">
         <div className="project__timeline">
@@ -62,13 +62,13 @@ const ProjectCard = project => {
           <div className="col-sm-7">
             <div className="project__card-name">{name}</div>
             <div className="project__card-subtitle">{subtitle}</div>
-            <div className="project__card-description" ref={$descriptionContainer} data-text-container={id + '-text'}>
-              <div className="text" ref={$descriptionText} data-textbox={id + '-text'}>
+            <div className="project__card-description" ref={$descriptionContainer} data-text-container={`${id}-text`}>
+              <div className="text" ref={$descriptionText} data-textbox={`${id}-text`}>
                 {description}
                 <div className="project__card-tech">{tech}</div>
               </div>
             </div>
-            <button className={`project__card-btn ${descriptionVisible ? 'project__card-btn--showless' : 'project__card-btn--showmore'}`} onClick={toggleShowMore}>
+            <button type="button" className={`project__card-btn ${descriptionVisible ? 'project__card-btn--showless' : 'project__card-btn--showmore'}`} onClick={toggleShowMore}>
               {descriptionVisible ? 'Show Less' : 'Show More'}
             </button>
             <div className="project__card-tags">
@@ -81,7 +81,7 @@ const ProjectCard = project => {
           </div>
           <div className="col-sm-5">
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <div className="project__card-image" data-card-image={id + '-image'}>
+              <div className="project__card-image" data-card-image={`${id}-image`}>
                 <img src={`./projects/${id}.png`} alt="" />
               </div>
             </a>

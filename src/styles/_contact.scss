@@ -1,0 +1,9 @@
+.contact {
+  background-color: $color-primary;
+
+  .section {
+    &__title {
+      color: $color-white;
+    }
+  }
+}

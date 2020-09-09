@@ -1,0 +1,34 @@
+.skills {
+  background-color: $color-white;
+  padding: 60px 0;
+
+  &::before {
+    background: url('../images/wave-white.png');
+    background-size: 100%;
+    content: '';
+    height: 146px;
+    position: absolute;
+    top: -57px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .section__title {
+    text-align: center;
+  }
+
+  &__list {
+    color: $color-grey-medium;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    justify-content: space-evenly;
+    list-style-type: disc;
+    margin: 0 auto;
+    max-width: 600px;
+
+    &-item {
+      flex-basis: 25%;
+    }
+  }
+}

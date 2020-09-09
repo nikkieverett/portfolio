@@ -1,35 +1,36 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react'
 
-const Header = (waves) => {
+const Header = () => {
+  const handleLinkClicks = (e) => {
+    const elementRef = e.target.getAttribute('data-link')
+    const scrollToElement = document.querySelector(elementRef)
+
+    scrollToElement.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="header">
       <div className="container">
         <span className="header__logo" />
-        <ul className="header__links">
-          <li className="link">
-            <a className="btn btn--no-outline" href="#section1">
-              Projects
-            </a>
+        <ul className="header__links" onClick={(e) => handleLinkClicks(e)}>
+          <li className="link btn btn--no-outline" data-link="#section1">
+            Projects
           </li>
-          <li className="link">
-            <a className="btn btn--no-outline" href="#section1">
-              About
-            </a>
+          <li className="link btn btn--no-outline" data-link="#section2">
+            About
           </li>
-          <li className="link">
-            <a className="btn btn--no-outline" href="#section1">
-              Skills
-            </a>
+          <li className="link btn btn--no-outline" data-link="#section3">
+            Skills
           </li>
-          <li className="link">
-            <a className="btn btn--no-outline" href="#section1">
-              Setup
-            </a>
+          <li className="link btn btn--no-outline" data-link="#section4">
+            Setup
           </li>
-          <li className="link">
-            <a className="btn btn--secondary" href="#section1">
-              Contact Me
-            </a>
+          <li className="link btn btn--secondary" data-link="#section5">
+            Contact Me
           </li>
         </ul>
       </div>

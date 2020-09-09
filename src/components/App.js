@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 
 import Waves from './Waves'
 import Header from './Header'
-import Hero from '../sections/Hero'
-import About from '../sections/About'
-import Projects from '../sections/Projects'
-import Skills from '../sections/Skills'
-import Contact from '../sections/Contact'
+import Hero from './sections/Hero'
+import About from './sections/About'
+import Projects from './sections/Projects'
+// import Skills from './sections/Skills'
+import Setup from './sections/Setup'
+import Contact from './sections/Contact'
 
 function App() {
   const [waves, setWaves] = useState([])
@@ -18,7 +19,8 @@ function App() {
       <Hero />
       <Waves setWaves={setWaves} waves={waves} />
       <Projects />
-      <Skills />
+      {/* <Skills /> */}
+      <Setup />
       <About />
       <Contact />
     </div>

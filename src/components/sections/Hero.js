@@ -1,6 +1,14 @@
 import React from 'react'
 
 const Hero = () => {
+  const handleLinkClicks = () => {
+    const scrollToElement = document.querySelector('#section5')
+
+    scrollToElement.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="hero section section-fixed">
       <div className="container">
@@ -16,7 +24,7 @@ const Hero = () => {
               </div>
               <div className="hero__subtitle">Front End Software Engineer & UX Developer</div>
               <div className="hero__btn">
-                <button className="btn btn--secondary" type="button">
+                <button className="btn btn--secondary" type="button" onClick={handleLinkClicks}>
                   Contact Me
                 </button>
               </div>
