@@ -1,9 +1,53 @@
 .contact {
   background-color: $color-primary;
 
+  .btn--secondary {
+    color: $color-white;
+    border-color: $color-white;
+  }
+
+  label {
+    font-family: $secondary-font;
+    color: $color-white;
+    margin-bottom: 10px;
+  }
+
   .section {
     &__title {
       color: $color-white;
+      font-size: 45px;
+      line-height: 53px;
+      margin-bottom: 35px;
+    }
+
+    &__text {
+      font-family: $secondary-font;
+      color: $color-white;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 500;
+    }
+
+    &__form {
+      padding: 0 15px;
+
+      .row {
+        margin: 0 -15px;
+      }
+
+      textarea {
+        max-height: 170px;
+
+        &::placeholder {
+          color: $color-grey-light;
+        }
+      }
+
+      input {
+        &::placeholder {
+          color: $color-grey-light;
+        }
+      }
     }
   }
 }

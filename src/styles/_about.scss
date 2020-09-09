@@ -1,3 +1,39 @@
 .about {
   background-color: $color-white;
+  padding: 106px 0;
+
+  .col-sm-4 {
+    padding-left: 50px;
+  }
+
+  .section {
+    &__text{
+      color: $color-grey-medium;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 29px;
+      letter-spacing: .1;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__list {
+      color: $color-grey-medium;
+
+      &-item {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 29px;
+        letter-spacing: .1;
+        margin-bottom: 15px;
+
+        b {
+          font-family: $secondary-font;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }

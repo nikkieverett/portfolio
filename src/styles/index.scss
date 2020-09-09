@@ -59,6 +59,11 @@ $color-white: #fff;
     background-color: transparent;
     min-height: 100vh;
   }
+
+  & > .row {
+    margin: 0 auto;
+    max-width: 950px;
+  }
 }
 
 .btn {

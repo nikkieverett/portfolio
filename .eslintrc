@@ -1,6 +1,12 @@
 {
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
+  "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2018,
+      "allowImportExportEverywhere": true
+  },
+  "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": ["error"],
     "react/forbid-prop-types": [2, {"forbid": ["any"]}],

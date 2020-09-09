@@ -1,12 +1,13 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import anime from 'animejs/lib/anime.es'
 
-const Waves = ({ setWaves, waves }) => {
+const Waves = () => {
   const wave1 = useRef(null)
   const wave2 = useRef(null)
   const wave3 = useRef(null)
   const wave4 = useRef(null)
   const waveContainer = useRef(null)
+  const [waves, setWaves] = useState([])
 
   const waveData = {
     targets: waves,

@@ -14,8 +14,8 @@ const Projects = () => {
   const projects = useMemo(() => setProjects(), [])
 
   return (
-    <div className="section-static projects" id="section1">
-      <div className="container">
+    <div className="section section-static projects fp-auto-height" id="section2">
+      <div className="row">
         <div className="projects__container">
           <div className="project row">
             <div className="col-sm-2">

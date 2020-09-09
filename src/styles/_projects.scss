@@ -190,6 +190,8 @@
   }
 
   &:last-child {
+    display: none;
+
     .project__timeline {
       padding: 10px 0;
 
