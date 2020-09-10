@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="hero section section-fixed" id="section1">
+      <div className="hero section fp-noscroll">
         <div className="container">
           <div className="row">
             <div className="col-sm">

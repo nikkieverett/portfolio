@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="section section-static contact" id="section6">
+    <div className="section section-static contact fp-noscroll">
       <div className="row">
         <div className="col-sm-6">
           <h2 className="section__title">Let's build something cool together.</h2>

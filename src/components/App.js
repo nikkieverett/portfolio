@@ -1,5 +1,7 @@
 /* eslint-disable no-new */
 import React, { useState, lazy, Suspense, useEffect } from 'react'
+
+import IScroll from 'fullpage.js/vendors/scrolloverflow.min.js'
 import fullpage from 'fullpage.js/dist/fullpage.extensions.min'
 
 import Header from './Header'
@@ -13,11 +15,24 @@ const Contact = lazy(() => import('./sections/Contact'))
 
 function App() {
   useEffect(() => {
-    // eslint-disable-next-line new-cap
-    new fullpage('#fullpage', {
-      licenseKey: 'EE11C0E5-1D934A52-AE1033F6-CC23CF10',
-      autoScrolling: true
-    })
+    setTimeout(() => {
+      // eslint-disable-next-line new-cap
+      new fullpage('#fullpage', {
+        licenseKey: 'EE11C0E5-1D934A52-AE1033F6-CC23CF10',
+        autoScrolling: true,
+        scrollOverflow: true,
+        scrollOverflowResetKey: 'C89E274E-34D847F8-BAC0D19A-A44705A2',
+        fitToSection: false,
+        onLeave: (origin, destination) => {
+          const list = destination.item.classList
+          list.forEach((item) => {
+            if (item === 'projects') {
+              console.log(destination.item.classList)
+            }
+          })
+        }
+      })
+    }, 100)
   }, [])
 
   return (
@@ -25,7 +40,6 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Header />
         <div id="fullpage">
-          <div className="section-placeholder" />
           <Hero />
           <Projects />
           <Skills />
