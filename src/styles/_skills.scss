@@ -22,13 +22,14 @@
     display: flex;
     flex-wrap: wrap;
     font-weight: 300;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     list-style-type: disc;
     margin: 0 auto;
     max-width: 600px;
 
     &-item {
       flex-basis: 25%;
+      margin-top: 25px;
     }
   }
 }

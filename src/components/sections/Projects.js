@@ -14,7 +14,7 @@ const Projects = () => {
   const projects = useMemo(() => setProjects(), [])
 
   return (
-    <div className="section section-static projects" id="section2">
+    <div className="section section-static projects" id="section1">
       <div className="row">
         <div className="projects__container">
           <div className="project row">
@@ -30,11 +30,7 @@ const Projects = () => {
             <div className="col-sm-2">
               <div className="project__timeline" />
             </div>
-            <div className="col-sm-10">
-              <button className="projects__btn" type="button">
-                View All
-              </button>
-            </div>
+            <div className="col-sm-10" />
           </div>
         </div>
       </div>

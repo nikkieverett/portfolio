@@ -21,13 +21,13 @@ const Header = () => {
             Projects
           </li>
           <li className="link btn btn--no-outline" data-link="#section2">
-            About
-          </li>
-          <li className="link btn btn--no-outline" data-link="#section3">
             Skills
           </li>
-          <li className="link btn btn--no-outline" data-link="#section4">
+          <li className="link btn btn--no-outline" data-link="#section3">
             Setup
+          </li>
+          <li className="link btn btn--no-outline" data-link="#section4">
+            About
           </li>
           <li className="link btn btn--secondary" data-link="#section5">
             Contact Me

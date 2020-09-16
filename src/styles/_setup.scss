@@ -2,14 +2,7 @@
   background-color: #F7EEEE;
   padding: 0;
 
-  &::before {
-    background: url('../images/wave-white.png');
-    background-size: 100%;
-    content: '';
-    height: 146px;
-    position: absolute;
-    top: -57px;
-    width: 100%;
-    z-index: -1;
+  .section__title {
+    margin: 120px auto 0;
   }
 }

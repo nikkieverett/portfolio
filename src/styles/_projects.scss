@@ -1,5 +1,6 @@
 .projects {
   background-color: $color-primary;
+  margin-top: -160px;
   padding-bottom: 140px;
 
   &__container {
@@ -190,8 +191,6 @@
   }
 
   &:last-child {
-    display: none;
-
     .project__timeline {
       padding: 10px 0;
 
@@ -200,7 +199,7 @@
         bottom: 0;
         content: '';
         height: 1px;
-        left: 50%;
+        left: 35px;
         position: absolute;
         width: 90px;
       }
