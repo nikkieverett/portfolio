@@ -5,7 +5,11 @@ import React from 'react'
 const Header = () => {
   const handleLinkClicks = (e) => {
     const elementRef = e.target.getAttribute('data-link')
-    // fullpage_api.moveTo(elementRef)
+    const scrollToElement = document.querySelector(elementRef)
+
+    scrollToElement.scrollIntoView({
+      behavior: 'smooth'
+    })
   }
 
   return (
@@ -13,19 +17,19 @@ const Header = () => {
       <div className="container">
         <span className="header__logo" />
         <ul className="header__links" onClick={(e) => handleLinkClicks(e)}>
-          <li className="link btn btn--no-outline" data-link="section1">
+          <li className="link btn btn--no-outline" data-link="#section1">
             Projects
           </li>
-          <li className="link btn btn--no-outline" data-link="section2">
+          <li className="link btn btn--no-outline" data-link="#section2">
             About
           </li>
-          <li className="link btn btn--no-outline" data-link="section3">
+          <li className="link btn btn--no-outline" data-link="#section3">
             Skills
           </li>
-          <li className="link btn btn--no-outline" data-link="section4">
+          <li className="link btn btn--no-outline" data-link="#section4">
             Setup
           </li>
-          <li className="link btn btn--secondary" data-link="section5">
+          <li className="link btn btn--secondary" data-link="#section5">
             Contact Me
           </li>
         </ul>

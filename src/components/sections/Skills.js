@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills = () => {
   return (
-    <div className="skills section section-static fp-auto-height fp-noscroll">
+    <div className="skills section section-static" id="section3">
       <h2 className="section__title">Skills</h2>
       <div className="skills__container">
         <ul className="skills__list">

@@ -60,7 +60,7 @@ $color-white: #fff;
     min-height: 100vh;
   }
 
-  .row-container {
+  & > .row  {
     margin: 0 auto;
     max-width: 950px;
   }
