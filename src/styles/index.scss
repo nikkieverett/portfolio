@@ -81,12 +81,27 @@ $color-white: #fff;
     background-color: $color-primary;
     border: 2px solid $color-primary;
     color: $color-white;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: darken($color-primary, 20);
+      border-color: darken($color-primary, 20);
+      color: darken($color-white, 20);
+    }
   }
 
   &--secondary {
     background-color: transparent;
     border: 2px solid $color-primary;
     color: $color-primary;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: darken($color-primary, 20);
+      color: darken($color-primary, 20);
+    }
   }
 
   &--no-outline {
@@ -94,6 +109,12 @@ $color-white: #fff;
     border: 2px solid transparent;
     color: $color-primary;
     width: auto;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($color-primary, 20);
+    }
   }
 }
 
