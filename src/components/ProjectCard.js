@@ -60,12 +60,12 @@ const ProjectCard = (project) => {
       <div className="col-sm-10">
         <div className="project__card row" key={name}>
           <div className="col-sm-7">
-            <div className="project__card-name">{name}</div>
-            <div className="project__card-subtitle">{subtitle}</div>
+            <div className="project__card-name" dangerouslySetInnerHTML={{ __html: name }} />
+            <div className="project__card-subtitle" dangerouslySetInnerHTML={{ __html: subtitle }} />
             <div className="project__card-description" ref={$descriptionContainer} data-text-container={`${id}-text`}>
               <div className="text" ref={$descriptionText} data-textbox={`${id}-text`}>
-                {description}
-                <div className="project__card-tech">{tech}</div>
+                <div dangerouslySetInnerHTML={{ __html: description }} />
+                <div className="project__card-tech" dangerouslySetInnerHTML={{ __html: tech }} />
               </div>
             </div>
             <button type="button" className={`project__card-btn ${descriptionVisible ? 'project__card-btn--showless' : 'project__card-btn--showmore'}`} onClick={toggleShowMore}>
