@@ -16,12 +16,12 @@ const deskObjects = {
     features: ['Meteorite Black', 'Wireless', 'Speed-Adaptive Scroll Wheel']
   },
   plant1: {
-    brand: 'Bunny Ear Cactus',
-    features: ['Nickname: Michelangelo', 'This cactus does not develop spines. Instead, it grows glochids, which are short whitish brown prickles.', 'Member of the prickly pear family']
-  },
-  plant2: {
     brand: 'Moon Cactus',
     features: ['Nickname: Raphael', "The top colorful portion of a moon cactus is technically a mutant that is not able to produce it's own chlorphyll. It has to be grafted on to the bottom cactus in order to survive", 'Member of the prickly pear family']
+  },
+  plant2: {
+    brand: 'Bunny Ear Cactus',
+    features: ['Nickname: Michelangelo', 'This cactus does not develop spines. Instead, it grows glochids, which are short whitish brown prickles.', 'Member of the prickly pear family']
   },
   plant3: {
     brand: 'Golden Pothos',

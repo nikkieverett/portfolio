@@ -128,7 +128,7 @@ const Setup = () => {
   const renderPopover = (props) => (
     <Popover id="popover-contained" {...props}>
       <Popover.Title as="h3">{popoverContent.brand}</Popover.Title>
-      <Popover.Content>{popoverContent.features}</Popover.Content>
+      <Popover.Content>{popoverContent.features.map(feature => <li>{feature}</li>)}</Popover.Content>
     </Popover>
   )
 
