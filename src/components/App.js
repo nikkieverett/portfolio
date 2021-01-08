@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useRef, useState, useEffect } from 'react'
 
 import Header from './Header'
 import Hero from './sections/Hero'
@@ -12,18 +12,43 @@ const Setup = lazy(() => import('./sections/Setup'))
 const Contact = lazy(() => import('./sections/Contact'))
 
 function App() {
+  const wavesRef = useRef(null)
+  const appRef = useRef(null)
+  const [isFixed, setIsFixed] = useState(false)
+
+  const handleScroll = (e) => {
+    if (wavesRef.current.getBoundingClientRect().top < 400) {
+      setIsFixed(true)
+    } else {
+      setIsFixed(false)
+    }
+  }
+
+  const scrollToTop = () => {
+    appRef.current.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', (e) => handleScroll(e))
+  }, [])
+
   return (
-    <div className="app">
+    <div className="app" ref={appRef}>
       <Suspense fallback={<div>Loading...</div>}>
-        <Header />
+        <Header isFixed={isFixed} />
         <div className="section section-placeholder" />
         <Hero />
-        <Waves />
+        <div ref={wavesRef}>
+          <Waves />
+        </div>
         <Projects />
         <Skills />
         <Setup />
         <About />
         <Contact />
+        {isFixed && <button onClick={scrollToTop} className="scrolltop btn">Scroll to top</button>}
       </Suspense>
     </div>
   )

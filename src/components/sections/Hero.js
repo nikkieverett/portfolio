@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="hero section section-fixed">
       <div className="container">
         <div className="row">
-          <div className="col-sm">
+          <div className="col-sm-6">
             <div className="hero__content">
               <div className="hero__title">
                 <h1>
@@ -44,7 +44,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm">
+          <div className="col-sm-6">
             <div className="hero__image" />
           </div>
         </div>

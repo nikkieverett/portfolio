@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react'
 
-const Header = () => {
+const Header = ({ isFixed }) => {
   const handleLinkClicks = (e) => {
     const elementRef = e.target.getAttribute('data-link')
     const scrollToElement = document.querySelector(elementRef)
@@ -13,7 +13,7 @@ const Header = () => {
   }
 
   return (
-    <div className="header">
+    <div className={`header${isFixed ? ' header--fixed' : ''}`}>
       <div className="container">
         <span className="header__logo" />
         <ul className="header__links" onClick={(e) => handleLinkClicks(e)}>

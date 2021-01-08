@@ -7,11 +7,7 @@ const About = () => {
         <div className="col-sm-8">
           <h3 className="section__title">About Me</h3>
           <p className="section__text">
-            <span className="handwave" />
-            Howdy!
-            <br />
-            <br />
-            I’m a Texas-based front-end developer currently working as a UI Engineer at Modernize Home Services. I have a genuine passion for building user-facing products and I'm very fond of the little details that make using the web fun. I like interactivity, accessibility, UI & UX, as well as performant code and semantic markup. I’ve spent over 3 years solving problems with web technologies and I’m always interested in finding new ways to develop challenging and innovative web products.
+            I’m a Texas-based front-end developer currently working as a UI Engineer at Modernize Home Services. I have a genuine passion for building user-facing products and I'm very fond of the little details that make using the web fun. I like interactivity, accessibility, UI & UX, as well as performant code and semantic markup. I’ve spent just over 4 years solving problems with web technologies and I’m always interested in finding new ways to develop challenging and innovative web products.
           </p>
         </div>
         <div className="col-sm-4">

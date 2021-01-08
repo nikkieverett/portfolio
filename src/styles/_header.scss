@@ -1,28 +1,58 @@
 .header {
   display: flex;
   left: 0;
-  padding: 15px 0;
+  padding: 10px 0;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 11;
+  box-shadow: none;
+  transition: background-color .25s ease-in-out;
+
+  .container {
+    max-width: 950px;
+    padding: 0;
+  }
 
   &__logo {
     background-image: url('../images/icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    height: 80px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
   }
 
   &__links {
     display: flex;
     float: right;
+    justify-content: flex-end;
+    padding-top: 10px;
+    width: 90%;
 
     .link {
       & + .link {
-        margin-left: 64px;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &--fixed {
+    z-index: 100000;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(#000, .1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    &__links {
+      justify-content: space-between;
+
+      .link {
+        & + .link {
+          margin: 0;
+        }
       }
     }
   }

@@ -11,7 +11,7 @@ const Contact = () => {
             <br />
             about your project and I'll get
             <br />
-            back you asap!
+            back to you asap!
           </p>
         </div>
         <div className="col-sm-6">

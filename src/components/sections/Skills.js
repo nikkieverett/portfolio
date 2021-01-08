@@ -7,7 +7,7 @@ const Skills = () => {
       <div className="skills__container">
         <ul className="skills__list">
           <li className="skills__list-item">HTML</li>
-          <li className="skills__list-item">ES5</li>
+          <li className="skills__list-item">ES5/ES6</li>
           <li className="skills__list-item">React Router</li>
           <li className="skills__list-item">Netlify</li>
           <li className="skills__list-item">CSS</li>
@@ -21,6 +21,7 @@ const Skills = () => {
           <li className="skills__list-item">jQuery</li>
           <li className="skills__list-item">Redux</li>
           <li className="skills__list-item">Gulp</li>
+          <li className="skills__list-item">AWS</li>
         </ul>
       </div>
     </div>

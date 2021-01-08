@@ -12,6 +12,7 @@
     background: $color-primary;
     border: 1.5px solid $color-white;
     color: $color-white;
+    cursor: pointer;
     font-size: 18px;
     height: unset;
     left: -2px;
@@ -95,6 +96,7 @@
     &-btn {
       @include button-base;
       background-color: $color-white;
+      cursor: pointer;
       font-size: 12px;
       height: 29px;
       margin: 15px 0 20px;
@@ -204,6 +206,11 @@
         width: 90px;
       }
     }
+  }
+
+  &.row {
+    margin-right: 0;
+    margin-left: -40px;
   }
 }
 

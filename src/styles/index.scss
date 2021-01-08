@@ -118,6 +118,13 @@ $color-white: #fff;
   }
 }
 
+.scrolltop {
+  position: fixed;
+  bottom: 15px;
+  z-index: 100000;
+  right: 15px;
+}
+
 @import './hero';
 @import './waves';
 @import './header';

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es'
 
 const ProjectCard = (project) => {
+  const cardRef = useRef(null)
   const { date, name, subtitle, description, tech, tags, id, link } = project.project
   const [descriptionVisible, setDescriptionVisible] = useState(false)
   const $descriptionContainer = useRef(null)
@@ -35,6 +36,11 @@ const ProjectCard = (project) => {
           100
         )
     } else {
+      cardRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      })
+
       anime({
         targets: `[data-text-container=${id}-text]`,
         height: $descriptionText.current.offsetHeight,
@@ -51,7 +57,7 @@ const ProjectCard = (project) => {
   }
 
   return (
-    <div className="project row">
+    <div className="project row" ref={cardRef}>
       <div className="col-sm-2">
         <div className="project__timeline">
           <div className="project__timeline-date">{date}</div>

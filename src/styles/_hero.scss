@@ -5,6 +5,12 @@
   transform: translate(50%, -40%);
   width: 100%;
 
+  .container {
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 0;
+  }
+
   &__content {
     color: $color-primary;
     display: table-cell;
@@ -28,9 +34,9 @@
 
   &__subtitle {
     color: $color-secondary;
-    letter-spacing: .1px;
     font-size: 24px;
     font-weight: 300;
+    letter-spacing: .1px;
     line-height: 28px;
     margin-bottom: 24px;
   }
@@ -40,8 +46,9 @@
     background-size: contain;
     border-radius: 100%;
     box-shadow: 3px 7px 14px 0 rgba(#000, .08);
-    height: 356px;
-    margin: 0 auto;
+    float: right;
+    height: 358px;
+    margin: 15px 10px 0 0;
     width: 356px;
 
     &::before {
@@ -107,6 +114,23 @@
       &--instagram {
         background: url('../images/social-icons/insta-icon.svg') no-repeat;
       }
+
+      &:hover {
+        filter: grayscale(100%) brightness(500%) brightness(30%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    &__content {
+      // position: relative;
+    }
+
+    &__image {
+      height: 200px;
+      width: 200px;
     }
   }
 }
