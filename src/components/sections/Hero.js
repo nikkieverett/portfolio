@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div className="hero section section-fixed">
       <div className="container">
-        <div className="row flex-column-reverse">
+        <div className="row">
           <div className="col-md-12 col-lg-6">
             <div className="hero__content">
               <div className="hero__title">

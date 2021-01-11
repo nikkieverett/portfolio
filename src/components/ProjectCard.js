@@ -20,7 +20,7 @@ const ProjectCard = (project) => {
 
       timeline
         .add({
-          targets: `[data-card-image=${id}-image]`,
+          targets: `${window.innerWidth > 768 ? '[data-card-image=${id}-image]' : ''}`,
           scale: 1
         })
         .add(
@@ -36,10 +36,17 @@ const ProjectCard = (project) => {
           100
         )
     } else {
-      cardRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      })
+      if (window.innerWidth > 768) {
+        cardRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      } else {
+        $descriptionContainer.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      }
 
       anime({
         targets: `[data-text-container=${id}-text]`,
@@ -47,10 +54,12 @@ const ProjectCard = (project) => {
         opacity: 1
       })
 
-      anime({
-        targets: `[data-card-image=${id}-image]`,
-        scale: 1.2
-      })
+      if (window.innerWidth > 768) {
+        anime({
+          targets: `[data-card-image=${id}-image]`,
+          scale: 1.2
+        })
+      }
     }
 
     setDescriptionVisible(!descriptionVisible)

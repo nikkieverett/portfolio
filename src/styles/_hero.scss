@@ -126,6 +126,10 @@
   .hero {
     margin: 5px auto;
 
+    .row {
+      flex-direction: column-reverse;
+    }
+
     &__content {
       position: relative;
       right: unset;

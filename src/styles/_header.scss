@@ -35,10 +35,6 @@
       & + .link {
         margin-left: 40px;
       }
-
-      &:last-child {
-        display: none;
-      }
     }
   }
 
@@ -52,15 +48,16 @@
 @media only screen and (max-width: 768px) {
   .header {
     background-color: white;
+    padding-top: 10px;
 
     .container {
       display: flex;
     }
 
     &__logo {
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
     }
 
     &__links {
@@ -69,11 +66,33 @@
       margin-left: 15px;
 
       .link {
-        padding: 0;
         font-size: 14px;
 
         & + .link {
           margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Tablet and smaller
+@media only screen and (max-width: 600px) {
+  .header {
+    &__logo {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    &__links {
+      margin-left: 10px;
+
+      .link {
+        padding: 0;
+
+        &:last-child {
+          display: none;
         }
       }
     }
