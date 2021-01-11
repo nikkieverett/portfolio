@@ -238,6 +238,30 @@
       }
 
       &__card {
+        &-image {
+          height: 300px;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        &.row {
+          margin: 0 0 50px;
+        }
+      }
+
+      &:last-child {
+        .project__timeline {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projects {
+    .project {
+      &__card {
         padding: 25px 0;
 
         &::before {
@@ -256,12 +280,6 @@
         &.row {
           flex-direction: column-reverse;
           margin: 30px 0 0;
-        }
-      }
-
-      &:last-child {
-        .project__timeline {
-          display: none;
         }
       }
     }
