@@ -12,8 +12,8 @@ const Hero = () => {
   return (
     <div className="hero section section-fixed">
       <div className="container">
-        <div className="row">
-          <div className="col-sm-6">
+        <div className="row flex-column-reverse">
+          <div className="col-md-12 col-lg-6">
             <div className="hero__content">
               <div className="hero__title">
                 <h1>
@@ -22,7 +22,7 @@ const Hero = () => {
                   I'm Nikki.
                 </h1>
               </div>
-              <div className="hero__subtitle">Front End Software Engineer & UX Developer</div>
+              <div className="hero__subtitle">Front End Software Engineer & UX&nbsp;Developer</div>
               <div className="hero__btn">
                 <button className="btn btn--secondary" type="button" onClick={handleLinkClicks}>
                   Contact Me
@@ -44,7 +44,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-md-12 col-lg-6">
             <div className="hero__image" />
           </div>
         </div>

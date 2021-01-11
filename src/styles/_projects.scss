@@ -73,7 +73,7 @@
 
     &-subtitle {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 20px;
       margin-bottom: 7px;
     }
@@ -88,7 +88,7 @@
 
     &-tech {
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 20px;
       margin-top: 16px;
     }
@@ -99,10 +99,23 @@
       cursor: pointer;
       font-size: 12px;
       height: 29px;
-      margin: 15px 0 20px;
+      margin: 15px 0 20px 15px;
       padding-left: 16px;
       position: relative;
       width: 116px;
+
+      &--default {
+        padding: 9px 16px;
+        width: auto;
+        color: $color-green;
+        border: 1px solid $color-green;
+
+        &:hover {
+          color: darken($color-green, 10);
+          text-decoration: none;
+          border-color: darken($color-green, 10);
+        }
+      }
 
       &--showmore {
         background-color: $color-green;
@@ -119,12 +132,11 @@
       }
 
       &--showless {
-        background-color: $color-white;
-        border: 1px solid $color-primary;
-        color: $color-primary;
+        background-color: $color-primary;
+        color: $color-white;
 
         &::before {
-          background-color: $color-primary;
+          background-color: $color-white;
           content: '';
           font-size: 16px;
           height: 2px;
@@ -143,17 +155,17 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
-      padding-top: 10px;
+      padding-top: 5px;
 
       .tag {
         border: 1px solid $color-grey;
         border-radius: 100px;
         color: $color-grey;
         display: block;
-        font-size: 13px;
-        margin-right: 10px;
+        font-size: 12px;
+        margin-right: 5px;
         margin-top: 10px;
-        padding: 7px 24px;
+        padding: 5px 10px;
         text-transform: uppercase;
       }
     }
@@ -201,7 +213,7 @@
         bottom: 0;
         content: '';
         height: 1px;
-        left: 35px;
+        left: 40px;
         position: absolute;
         width: 90px;
       }
@@ -210,7 +222,12 @@
 
   &.row {
     margin-right: 0;
-    margin-left: -40px;
+    margin-left: -52px;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .projects {
+    margin-top: -50px;
+  }
+}

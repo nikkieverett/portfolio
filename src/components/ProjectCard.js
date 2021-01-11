@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es'
 
 const ProjectCard = (project) => {
   const cardRef = useRef(null)
-  const { date, name, subtitle, description, tech, tags, id, link } = project.project
+  const { date, name, subtitle, description, tech, tags, id, link, code } = project.project
   const [descriptionVisible, setDescriptionVisible] = useState(false)
   const $descriptionContainer = useRef(null)
   const $descriptionText = useRef(null)
@@ -74,9 +74,13 @@ const ProjectCard = (project) => {
                 <div className="project__card-tech" dangerouslySetInnerHTML={{ __html: tech }} />
               </div>
             </div>
-            <button type="button" className={`project__card-btn ${descriptionVisible ? 'project__card-btn--showless' : 'project__card-btn--showmore'}`} onClick={toggleShowMore}>
-              {descriptionVisible ? 'Show Less' : 'Show More'}
-            </button>
+            <div className="row">
+              <button type="button" className={`project__card-btn ${descriptionVisible ? 'project__card-btn--showless' : 'project__card-btn--showmore'}`} onClick={toggleShowMore}>
+                {descriptionVisible ? 'Show Less' : 'Show More'}
+              </button>
+              {link && <a href={link} className='project__card-btn project__card-btn--default'>Visit site</a>}
+              {code && <a href={code} className='project__card-btn project__card-btn--default'>See code</a>}
+            </div>
             <div className="project__card-tags">
               {tags.map((tag) => (
                 <span className="tag" key={tag}>

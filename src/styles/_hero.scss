@@ -122,15 +122,47 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hero {
+    margin: 5px auto;
+
     &__content {
-      // position: relative;
+      position: relative;
+      right: unset;
+      top: unset;
+      transform: none;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 38px;
+      max-width: 350px;
+      margin: 0 auto 15px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      max-width: 300px;
+      margin: 0 auto 25px;
     }
 
     &__image {
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
+      float: none;
+      margin: 10px auto;
+
+      &::before {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    &__links {
+      margin-top: 20px;
     }
   }
 }

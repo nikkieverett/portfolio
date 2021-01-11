@@ -48,7 +48,7 @@ function App() {
         <Setup />
         <About />
         <Contact />
-        {isFixed && <button onClick={scrollToTop} className="scrolltop btn">Scroll to top</button>}
+        {isFixed && <button onClick={scrollToTop} className="scrolltop"><i class="bi bi-chevron-up"></i></button>}
       </Suspense>
     </div>
   )

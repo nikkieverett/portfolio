@@ -40,3 +40,25 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .waves {
+    .wave {
+      &--1 {
+        bottom: -270px;
+      }
+
+      &--2 {
+        bottom: -240px;
+      }
+
+      &--3 {
+        bottom: -250px;
+      }
+
+      &--4 {
+        bottom: -230px;
+      }
+    }
+  }
+}
