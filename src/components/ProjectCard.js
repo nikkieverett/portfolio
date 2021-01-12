@@ -2,9 +2,10 @@ import React, { useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es'
 
 const ProjectCard = (project) => {
-  const cardRef = useRef(null)
   const { date, name, subtitle, description, tech, tags, id, link, code } = project.project
   const [descriptionVisible, setDescriptionVisible] = useState(false)
+  const $cardRef = useRef(null)
+  const $cardBody = useRef(null)
   const $descriptionContainer = useRef(null)
   const $descriptionText = useRef(null)
 
@@ -37,12 +38,12 @@ const ProjectCard = (project) => {
         )
     } else {
       if (window.innerWidth > 768) {
-        cardRef.current.scrollIntoView({
+        $cardRef.current.scrollIntoView({
           behavior: 'smooth',
           block: 'center'
         })
       } else {
-        $descriptionContainer.current.scrollIntoView({
+        $cardBody.current.scrollIntoView({
           behavior: 'smooth',
           block: 'center'
         })
@@ -66,14 +67,14 @@ const ProjectCard = (project) => {
   }
 
   return (
-    <div className="project row" ref={cardRef}>
+    <div className="project row" ref={$cardRef}>
       <div className="col-sm-2">
         <div className="project__timeline">
           <div className="project__timeline-date">{date}</div>
         </div>
       </div>
       <div className="col-sm-10">
-        <div className="project__card row" key={name}>
+        <div className="project__card row" ref={$cardBody} key={name}>
           <div className="col-sm-7">
             <div className="project__card-name" dangerouslySetInnerHTML={{ __html: name }} />
             <div className="project__card-subtitle" dangerouslySetInnerHTML={{ __html: subtitle }} />
