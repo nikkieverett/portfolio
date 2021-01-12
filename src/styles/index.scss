@@ -45,6 +45,10 @@ $mobile-width: 600px;
 @import './reset';
 @import './animation';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .app {
   color: $color-secondary;
   font-family: $primary-font;

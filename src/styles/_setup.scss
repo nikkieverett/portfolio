@@ -22,6 +22,8 @@
 
 @include phone-breakpoint {
   .setup {
+    padding-top: 30px;
+
     .section__title {
       margin: 30px auto 0;
     }

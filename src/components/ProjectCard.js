@@ -20,7 +20,7 @@ const ProjectCard = (project) => {
 
       timeline
         .add({
-          targets: `${window.innerWidth > 768 ? '[data-card-image=${id}-image]' : ''}`,
+          targets: `${window.innerWidth > 768 ? `[data-card-image=${id}-image]` : ''}`,
           scale: 1
         })
         .add(

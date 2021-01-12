@@ -8,7 +8,8 @@ const Header = ({ isFixed }) => {
     const scrollToElement = document.querySelector(elementRef)
 
     scrollToElement.scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'start'
     })
   }
 

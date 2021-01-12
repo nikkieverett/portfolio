@@ -1,6 +1,6 @@
 .skills {
   background-color: $color-white;
-  padding: 60px 0;
+  padding: 120px 0 60px;
 
   &::before {
     background: url('../images/wave-white.png') no-repeat;
@@ -36,7 +36,7 @@
 
 @include tablet-breakpoint {
   .skills {
-    padding-top: 30px;
+    padding-top: 60px;
 
     &::before {
       background-size: cover;

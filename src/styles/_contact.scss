@@ -1,5 +1,6 @@
 .contact {
   background-color: $color-primary;
+  height: 450px;
 
   .btn--secondary {
     color: $color-white;
@@ -50,10 +51,23 @@
       }
     }
   }
+
+  .thankyou {
+    font-family: $secondary-font;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: -50px;
+  }
 }
 
 @include tablet-breakpoint {
   .contact {
+    height: 800px;
+
     .section {
       &__title {
         font-size: 40px;
@@ -63,10 +77,10 @@
       &__text {
         margin-bottom: 30px;
       }
+
       &__form {
         padding: 0;
       }
-
     }
   }
 }
