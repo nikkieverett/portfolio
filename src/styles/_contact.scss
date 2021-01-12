@@ -51,3 +51,22 @@
     }
   }
 }
+
+@include tablet-breakpoint {
+  .contact {
+    .section {
+      &__title {
+        font-size: 40px;
+        line-height: 38px;
+      }
+
+      &__text {
+        margin-bottom: 30px;
+      }
+      &__form {
+        padding: 0;
+      }
+
+    }
+  }
+}

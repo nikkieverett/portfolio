@@ -13,7 +13,6 @@ const Skills = () => {
           <li className="skills__list-item">CSS</li>
           <li className="skills__list-item">React</li>
           <li className="skills__list-item">Hooks</li>
-          <li className="skills__list-item">Heroku</li>
           <li className="skills__list-item">JavaScript</li>
           <li className="skills__list-item">Preact</li>
           <li className="skills__list-item">Webpack</li>

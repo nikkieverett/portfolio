@@ -6,3 +6,24 @@
     margin: 120px auto 0;
   }
 }
+
+@include tablet-breakpoint {
+  .setup {
+    .section__title {
+      margin: 60px auto -60px;
+    }
+
+    svg {
+      height: 100vw;
+      margin-left: 15px;
+    }
+  }
+}
+
+@include phone-breakpoint {
+  .setup {
+    .section__title {
+      margin: 30px auto 0;
+    }
+  }
+}

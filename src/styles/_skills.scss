@@ -3,7 +3,7 @@
   padding: 60px 0;
 
   &::before {
-    background: url('../images/wave-white.png');
+    background: url('../images/wave-white.png') no-repeat;
     background-size: 100%;
     content: '';
     height: 146px;
@@ -35,5 +35,20 @@
 }
 
 @include tablet-breakpoint {
+  .skills {
+    padding-top: 30px;
 
+    &::before {
+      background-size: cover;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__list-item {
+      flex-basis: 33.33%;
+      text-align: center;
+    }
+  }
 }
