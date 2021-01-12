@@ -45,7 +45,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-breakpoint {
   .header {
     background-color: white;
     padding-top: 10px;
@@ -76,8 +76,7 @@
   }
 }
 
-// Tablet and smaller
-@media only screen and (max-width: 600px) {
+@include phone-breakpoint {
   .header {
     &__logo {
       width: 30px;
