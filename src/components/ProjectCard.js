@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import anime from 'animejs/lib/anime.es'
 
-const ProjectCard = (project) => {
-  const { date, name, subtitle, description, tech, tags, id, link } = project.project
+const ProjectCard = ({ project }) => {
+  const { date, name, subtitle, description, tech, tags, id, link } = project
   const [descriptionVisible, setDescriptionVisible] = useState(false)
   const $descriptionContainer = useRef(null)
   const $descriptionText = useRef(null)
@@ -80,7 +80,7 @@ const ProjectCard = (project) => {
             </div>
           </div>
           <div className="col-sm-5">
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a href={link} target="_blank" rel="noopener noreferrer" aria-label={`View the ${name} project`}>
               <div className="project__card-image" data-card-image={`${id}-image`}>
                 <img src={`./projects/${id}.png`} alt="" />
               </div>
